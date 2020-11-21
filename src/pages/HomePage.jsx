@@ -39,7 +39,7 @@ const HomePage = () => {
 
   return (
     <div className={styles.body}>
-      <h1 className={styles.title}>REACT DAILY CHAT ALTERADO</h1>
+      <h1 className={styles.title}>REACT DAILY CHAT</h1>
       <Container fluid>
         <Row>
           <Col md={{ span: 8, offset: 2 }} xs={12}>
