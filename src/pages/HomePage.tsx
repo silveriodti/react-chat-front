@@ -4,10 +4,12 @@ import { Col, Container, Row } from "react-bootstrap";
 import List from "../components/List/List";
 import Panel from "../components/Panel/Panel";
 import styles from "./HomePage.module.css";
+import { Meeting } from "../interfaces/Meeting"
+import { MeetingComplete } from "../interfaces/MeetingComplete"
 
 const HomePage = (): JSX.Element => {
-  const [data, setData] = useState([]);
-  const [selectedMeeting, setSelectedMeeting] = useState();
+  const [data, setData] = useState<Array<Meeting>>([]);
+  const [selectedMeeting, setSelectedMeeting] = useState<MeetingComplete>();
 
   useEffect(() => {
     axios
