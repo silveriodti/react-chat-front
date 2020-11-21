@@ -5,9 +5,9 @@ import List from "../components/List/List";
 import Panel from "../components/Panel/Panel";
 import styles from "./HomePage.module.css";
 
-const HomePage = () => {
+const HomePage = (): JSX.Element => {
   const [data, setData] = useState([]);
-  const [selectedMeeting, setSelectedMeeting] = useState(null);
+  const [selectedMeeting, setSelectedMeeting] = useState();
 
   useEffect(() => {
     axios
@@ -23,7 +23,7 @@ const HomePage = () => {
       });
   }, []);
 
-  const handleOnClickMeeting = (meetingId) => {
+  const handleOnClickMeeting = (meetingId: number) => {
     axios
       .get(
         `https://react-challenge-api.herokuapp.com/first-challenge/episodes/${meetingId}`

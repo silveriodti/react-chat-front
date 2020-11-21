@@ -1,7 +1,12 @@
 import React from "react";
+import { MeetingComplete } from "../../interfaces/MeetingComplete";
 import styles from "./Panel.module.css";
 
-const Panel = ({ selectedMeeting }) => {
+interface Props {
+  selectedMeeting?: MeetingComplete;
+}
+
+const Panel = ({ selectedMeeting }: Props): JSX.Element => {
   if (selectedMeeting) {
     return (
       <div className={styles.body}>

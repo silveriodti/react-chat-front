@@ -1,8 +1,14 @@
 import React from "react";
 import { Button } from "react-bootstrap";
+import { Meeting } from "../../../interfaces/Meeting";
 import styles from "./ListItem.module.css";
 
-const ListItem = ({ content, handleOnClick }) => {
+interface Props {
+  content: Meeting;
+  handleOnClick: Function;
+}
+
+const ListItem = ({ content, handleOnClick }: Props): JSX.Element => {
   return (
     <li>
       <Button
