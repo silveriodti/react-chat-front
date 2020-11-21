@@ -1,0 +1,5 @@
+.list {
+  border-right: 1px outset white;
+  list-style-type: none;
+  padding: 0 1em 0 0;
+}

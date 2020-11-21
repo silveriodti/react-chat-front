@@ -1,0 +1,16 @@
+.noMeetingSelected {
+  color: white;
+  padding-top: 2rem;
+  text-align: center;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.date {
+  color: lightgray;
+  margin: 1rem 0;
+}
+
+.body {
+  padding-left: 1rem;
+}
