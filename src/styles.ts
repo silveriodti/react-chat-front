@@ -24,7 +24,6 @@ export const Box = styled.div`
     margin: 16px 0;
 `;
 
-
 export const LinhaClicavel = styled.div`
     cursor: pointer;
     text-decoration: underline;
