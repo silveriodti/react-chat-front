@@ -14,7 +14,7 @@ const Linha = ({
 	data,
 	descricao,
 }: Props) => {
-	
+
 	const [collapse, setCollapse] = useState(true);
 	const [textoDescricao, setTextoDescricao] = useState("");
 	const [link, setLink] = useState("");
