@@ -3,9 +3,6 @@ import axios from 'axios';
 import { LinhaClicavel, Gravacao } from '../styles'
 import { links } from './Biblioteca';
 
-const [collapse, setCollapse] = useState(true);
-const [textoDescricao, setTextoDescricao] = useState("");
-const [link, setLink] = useState("");
 interface Props {
 	id: number,
 	data: string,
@@ -17,6 +14,10 @@ const Linha = ({
 	data,
 	descricao,
 }: Props) => {
+	
+	const [collapse, setCollapse] = useState(true);
+	const [textoDescricao, setTextoDescricao] = useState("");
+	const [link, setLink] = useState("");
 
 	useEffect(() => {
 		axios.get(`https://react-challenge-api.herokuapp.com/first-challenge/episodes/${id}`)
