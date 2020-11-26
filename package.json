@@ -12,6 +12,9 @@
     "@types/react-dom": "^16.9.9",
     "@types/styled-components": "^5.1.4",
     "axios": "^0.21.0",
+    "babel-plugin-istanbul": "^6.0.0",
+    "cypress": "^6.0.0",
+    "cypress-react-unit-test": "^4.17.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.0",
@@ -22,8 +25,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "react-scripts test, nyc mocha",
+    "eject": "react-scripts eject",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "coverage": "nyc --reporter=lcov --reporter=text-lcov"
   },
   "eslintConfig": {
     "extends": [
@@ -41,6 +47,17 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@cypress/code-coverage": "^3.8.5"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "istanbul"
     ]
   }
 }
